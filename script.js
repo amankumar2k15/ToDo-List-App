@@ -6,12 +6,12 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const task = input.value;
+    // console.log(task)
 
     if (!task) {
-        alert('Please fill out the task')
-        return
+        return alert('Please fill out the task')
     }
-    
+
     //Appending the Elements
     const task_el = document.createElement("div");
     task_el.classList.add('task');
@@ -51,7 +51,7 @@ form.addEventListener('submit', (e) => {
 
     list_el.appendChild(task_el);
 
-     
+
     // Edit Button function 
     input.value = '';
     task_edit_el.addEventListener('click', () => {
@@ -71,8 +71,4 @@ form.addEventListener('submit', (e) => {
     task_delete_el.addEventListener('click', () => {
         task_el.remove();
     })
-
-
-
-
 })
